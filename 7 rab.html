@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      .wheel {
+        width: 200px;
+        height: 200px;
+        animation: wheel 5s 1s;
+        animation-fill-mode: both;
+      }
+      @keyframes wheel {
+        from {
+          transform: translateX(0) rotate(0);
+        }
+        to {
+          transform: translateX(700px) rotate(2turn);
+        }
+      }
+    </style>
+  <style>
+#train {
+position: relative;
+cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<script>
+train.onclick = function() {
+let start = Date.now();
+let timer = setInterval(function() {
+let timePassed = Date.now() - start;
+train.style.left = timePassed / 5 + 'px';
+if (timePassed > 2000) clearInterval(timer);
+}, 20);
+}
+</script>
+  
+    
+    
+<style>
+div {
+width: 60px;
+height: 60px;
+border-radius: 70%;
+background: rgb(241,141,250);
+position: relative;
+animation: mymove 15s infinite;
+}
+div:hover {
+animation-play-state: paused;
+}
+@keyframes mymove {
+from {
+left: 0px;
+}
+to {
+left: 300px;
+}
+}
+</style>
+</head>
+<body>
+<h1>Нажми  и остановишь</h1>
+<p>Наведите курсор на движууюся фигуру, чтобы остановить анимацию.</p><br>
+
+<div></div>
+<div></div>
+Картинка анимирует сама 
+ <img src="https://www.pngmart.com/files/16/Vector-Dog-Face-PNG-Pic.png" alt="" class="wheel" />
+ 
+ 
+ 
+ <h1>Изменение состояния воспроизведения анимации с помощью JavaScript</h1>
+
+    <p>Нажмите кнопки, чтобы воспроизвести/приостановить анимацию:</p>
+    <button>Нажмите</button>
+  <style>
+    button {
+  transition: background-color 0.5s ease-in-out;
+}
+
+button:active {
+  background-color: #3DB2D4;
+}
+  </style>
+    <button onclick="myPlayFunction()">Play</button>
+    <button onclick="myPauseFunction()">Pause</button>
+
+    <script>
+      function myPlayFunction() {
+        document.getElementById("myDIV").style.animationPlayState = "running";
+      }
+
+      function myPauseFunction() {
+        document.getElementById("myDIV").style.animationPlayState = "paused";
+      }
+    </script>
+
+    <div id="myDIV"></div>
+ 
+ 
+ 
+ 
+</body>
+</html>
